@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+# Check if program is running in a screen
+if ! pgrep -f -x "SCREEN -d -m ./infinityloop" > /dev/null
+then
+	# Re-run program in a screen and immediately detach it
+	screen -d -m ./infinityloop
+
+	if ! pgrep -f -x "SCREEN -d -m ./infinityloop"
+	then
+		# Program restart is not working
+		mail -s 'Botty sad' youremailhere@gmail.com <<< 'I have try to restart but no luck :('
+	else
+		# Program restart is working
+		mail -s 'Botty happy' youremailhere@gmail.com <<< 'I made program run. Botty is a good bot'
+	fi
+fi
