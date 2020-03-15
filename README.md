@@ -13,13 +13,12 @@ Guide:
 1. Install ssmtp package with `sudo apt install ssmtp`
 2. Install mailutils package with `sudo apt install mailutils`
 3. Edit your `/etc/ssmtp/ssmtp.conf` file by adding the following:
-   `
-   UseSTARTTLS=YES
-   UseTLS=YES
-   root=username@gmail.com
-   mailhub=smtp.gmail.com:587
-   AuthUser=username@gmail.com
-   AuthPass=password`
+   `UseSTARTTLS=YES`
+   `UseTLS=YES`
+   `root=username@gmail.com`
+   `mailhub=smtp.gmail.com:587`
+   `AuthUser=username@gmail.com`
+   `AuthPass=password`
 
 ## Modifying botty script
 Since I have my program running in a screen session, the script assumes you have screen installed in your linux server. If you haven't, run `sudo apt-get install screen` in your terminal.
